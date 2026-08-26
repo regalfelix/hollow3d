@@ -4,39 +4,11 @@ A **Dark Souls–themed raycasting engine**, built from scratch in C as the `cub
 
 The mandatory version is a classic raycaster: textured walls and WASD + arrow-key controls. The bonus version turns it into an actual mini dungeon crawler: animated doors, a minimap, wandering enemies, an FPS counter, and a swingable sword.
 
+### Mandatory version
+![Gameplay Screenshot](media/basic_gameplay_screenshot.png)
+
+### Bonus version
 ![Gameplay Screenshot](media/bonus_gameplay_screenshot.png)
-
-![Gameplay Screenshot](media/gameplay_basic_1.png)
-
-## Technical overview
-
-- **Language:** C, compiled with `gcc` (`-O3 -flto -ffast-math`, AddressSanitizer enabled)
-- **Rendering:** custom DDA raycasting engine (wall projection, textured hits, floor/ceiling casting in the bonus version)
-- **Graphics library:** [MLX42](https://github.com/codam-coding-college/MLX42) (built with CMake), a modern replacement for the classic 42 MiniLibX, using GLFW under the hood
-- **Own libraries:** `libft` (custom C standard-library replacement) is vendored under `libraries/libft`
-- **Map format:** custom `.cub` map files — ASCII grids describing walls, floor/ceiling colors, wall textures, spawn point, and (bonus only) doors and enemies
-- **Window:** 960×540 by default
-- **Bonus additions on top of the mandatory raycaster:**
-  - Animated opening/closing doors
-  - A radar-style minimap
-  - Roaming enemies with sprite rendering and depth sorting
-  - Live FPS counter overlay
-  - A first-person sword swing animation
-
-## Project structure
-
-```
-hollow3d/
-├── sources/            # mandatory raycaster source
-├── sources_bonus/      # bonus source (doors, enemies, minimap, FPS, sword)
-├── libraries/
-│   ├── MLX42/          # graphics library (built via CMake)
-│   └── libft/          # custom C library
-├── maps/               # .cub map files
-├── resources/          # textures, sprites, UI assets
-├── cub3d.h             # shared header
-└── Makefile
-```
 
 ## How to compile
 
@@ -79,20 +51,18 @@ Maps live in `maps/`. Point the binary at any valid `.cub` file to start playing
 
 ## Controls
 
-### Mandatory version
-
 | Key | Action |
 |---|---|
 | `W` / `A` / `S` / `D` | Move forward / left / back / right |
 | `←` / `→` | Rotate camera |
-| `↑` | Swing sword | (bonus version only)
+| `↑` | Swing sword (bonus version only)|
 | `Esc` | Quit |
 
 Doors open automatically as you approach them, and the minimap and FPS counter are always shown on-screen.
 
 ## Screenshots & video
 
-### Mandatory
+### Mandatory version
 ![hollow3d gameplay](media/demo_basic.gif)
 
 ### Combat
@@ -100,3 +70,33 @@ Doors open automatically as you approach them, and the minimap and FPS counter a
 
 ### Doors
 ![hollow3d gameplay](media/demo_bonus_door.gif)
+
+## Technical overview
+
+- **Language:** C, compiled with `gcc` (`-O3 -flto -ffast-math`, AddressSanitizer enabled)
+- **Rendering:** custom DDA raycasting engine (wall projection, textured hits, floor/ceiling casting in the bonus version)
+- **Graphics library:** [MLX42](https://github.com/codam-coding-college/MLX42) (built with CMake), a modern replacement for the classic 42 MiniLibX, using GLFW under the hood
+- **Own libraries:** `libft` (custom C standard-library replacement) is vendored under `libraries/libft`
+- **Map format:** custom `.cub` map files — ASCII grids describing walls, floor/ceiling colors, wall textures, spawn point, and (bonus only) doors and enemies
+- **Window:** 960×540 by default
+- **Bonus additions on top of the mandatory raycaster:**
+  - Animated opening/closing doors
+  - A radar-style minimap
+  - Roaming enemies with sprite rendering and depth sorting
+  - Live FPS counter overlay
+  - A first-person sword swing animation
+
+## Project structure
+
+```
+hollow3d/
+├── sources/            # mandatory raycaster source
+├── sources_bonus/      # bonus source (doors, enemies, minimap, FPS, sword)
+├── libraries/
+│   ├── MLX42/          # graphics library (built via CMake)
+│   └── libft/          # custom C library
+├── maps/               # .cub map files
+├── resources/          # textures, sprites, UI assets
+├── cub3d.h             # shared header
+└── Makefile
+```
