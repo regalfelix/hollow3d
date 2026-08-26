@@ -100,11 +100,7 @@ Doors open automatically as you approach them, and the minimap and FPS counter a
 ![placeholder](docs/screenshot1.png)
 ```
 
-```markdown
 ## Gameplay demo for bonus
 
 ![hollow3d gameplay](media/demo_bonus_enemies.gif)
 ![hollow3d gameplay](media/demo_bonus_door.gif)
-
-https://github.com/user-attachments/assets/your-uploaded-video-id
-```
