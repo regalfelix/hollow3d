@@ -4,7 +4,7 @@ A **Dark Souls–themed raycasting engine**, built from scratch in C as the `cub
 
 The mandatory version is a classic raycaster: textured walls and WASD + arrow-key controls. The bonus version turns it into an actual mini dungeon crawler: animated doors, a minimap, wandering enemies, an FPS counter, and a swingable sword.
 
-![Gameplay Screenshot](media/gameplay_bonus_1.png)
+![Gameplay Screenshot](media/bonus_gameplay_screenshot.png)
 
 ![Gameplay Screenshot](media/gameplay_basic_1.png)
 
@@ -91,8 +91,6 @@ Maps live in `maps/`. Point the binary at any valid `.cub` file to start playing
 Doors open automatically as you approach them, and the minimap and FPS counter are always shown on-screen.
 
 ## Screenshots & video
-
-## Gameplay demo for bonus
 
 ### Mandatory
 ![hollow3d gameplay](media/demo_basic.gif)
