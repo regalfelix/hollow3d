@@ -4,6 +4,10 @@ A **Dark Souls–themed raycasting engine**, built from scratch in C as the `cub
 
 The mandatory version is a classic raycaster: textured walls and WASD + arrow-key controls. The bonus version turns it into an actual mini dungeon crawler: animated doors, a minimap, wandering enemies, an FPS counter, and a swingable sword.
 
+![Gameplay Screenshot](media/gameplay_bonus_1.png)
+
+![Gameplay Screenshot](media/gameplay_basic_1.png)
+
 ## Technical overview
 
 - **Language:** C, compiled with `gcc` (`-O3 -flto -ffast-math`, AddressSanitizer enabled)
@@ -28,9 +32,9 @@ hollow3d/
 ├── libraries/
 │   ├── MLX42/          # graphics library (built via CMake)
 │   └── libft/          # custom C library
-├── maps/                # .cub map files
-├── resources/            # textures, sprites, UI assets
-├── cub3d.h               # shared header
+├── maps/               # .cub map files
+├── resources/          # textures, sprites, UI assets
+├── cub3d.h             # shared header
 └── Makefile
 ```
 
@@ -60,7 +64,7 @@ Both targets build `libft` and `MLX42` automatically before linking the final `c
 ```bash
 make clean    # remove object files and build/ dir, keep the binary
 make fclean   # also remove the cub3d binary
-make re       # fclean + all (mandatory)
+make re       # fclean + all
 ```
 
 ## How to execute
@@ -81,26 +85,20 @@ Maps live in `maps/`. Point the binary at any valid `.cub` file to start playing
 |---|---|
 | `W` / `A` / `S` / `D` | Move forward / left / back / right |
 | `←` / `→` | Rotate camera |
-| `Esc` | Quit |
-
-### Bonus version
-
-| Key | Action |
-|---|---|
-| `W` / `A` / `S` / `D` | Move forward / left / back / right |
-| `←` / `→` | Rotate camera |
-| `↑` | Swing sword |
+| `↑` | Swing sword | (bonus version only)
 | `Esc` | Quit |
 
 Doors open automatically as you approach them, and the minimap and FPS counter are always shown on-screen.
 
 ## Screenshots & video
 
-```markdown
-![placeholder](docs/screenshot1.png)
-```
-
 ## Gameplay demo for bonus
 
+### Mandatory
+![hollow3d gameplay](media/demo_basic.gif)
+
+### Combat
 ![hollow3d gameplay](media/demo_bonus_enemies.gif)
+
+### Doors
 ![hollow3d gameplay](media/demo_bonus_door.gif)
