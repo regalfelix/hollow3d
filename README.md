@@ -100,3 +100,7 @@ hollow3d/
 ├── cub3d.h             # shared header
 └── Makefile
 ```
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). Note that it links against [MLX42](libraries/MLX42), which is separately licensed under GPLv2.
