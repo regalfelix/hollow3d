@@ -1,6 +1,6 @@
 # hollow3d
 
-A **Dark Souls–themed raycasting engine**, built from scratch in C as the `cub3d` project for 42. It renders a first‑person, textured 3D view of a 2D map in real time — no external 3D engine, just raycasting math, custom parsing, and [MLX42](https://github.com/codam-coding-college/MLX42) for the window/graphics layer.
+A **Dark Souls–themed raycasting engine**, built from scratch in C as the `cub3d` project for 42. It renders a first‑person, textured 3D view of a 2D map in real time. Done with no external 3D engine, just raycasting math, custom parsing, and [MLX42](https://github.com/codam-coding-college/MLX42) for the window/graphics layer.
 
 The mandatory version is a classic raycaster: textured walls and WASD + arrow-key controls. The bonus version turns it into an actual mini dungeon crawler: animated doors, a minimap, wandering enemies, an FPS counter, and a swingable sword.
 
